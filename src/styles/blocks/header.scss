@@ -122,6 +122,14 @@
       right: 0;
     }
 
+    @include above1024 {
+      right: -90px;
+    }
+
+    @include above1600 {
+      right: -190px;
+    }
+
     &-button {
       display: flex;
       column-gap: 16px;
