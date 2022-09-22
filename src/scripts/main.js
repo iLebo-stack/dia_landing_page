@@ -69,7 +69,7 @@ const slides = document.querySelectorAll('.header__image-slider');
 const previousButton = document.querySelector('.header__slider-button-prev');
 const nextButton = document.querySelector('.header__slider-button-next');
 
-window.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
   adjustSliderPosition();
 
   slides.forEach(slide => {
