@@ -1,6 +1,7 @@
 .intro {
   text-align: center;
   padding: 120px 20px;
+  overflow-x: hidden;
 
   @include above320 {
     padding: 148px 41px;
@@ -12,6 +13,15 @@
     line-height: 150%;
     margin-bottom: 24px;
 
+    transform: translateX(100px);
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+
+    &--active {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
     @include above320 {
       margin-bottom: 16px;
     }
@@ -21,5 +31,14 @@
     max-width: 754px;
     margin: 0 auto;
     color: $c-darkgray;
+
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+
+    &--active {
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
 }

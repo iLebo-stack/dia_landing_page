@@ -91,16 +91,16 @@
 
           <section class="header__slider">
             <picture>
-              <source media="(min-width: 1601px)" srcset="images/slider/slide-img-2560.png">
-              <source media="(min-width: 1025px)" srcset="images/slider/slide-img-1600.png">
-              <source media="(min-width: 641px)" srcset="images/slider/slide-img-1040.png">
-              <source media="(min-width: 321px)" srcset="images/slider/slide-img-forTablet.png">
+              <source media="(min-width: 641px)" srcset="images/slider/slide-img-2560.png">
               <img
-                src="images/slider/slide-img-1.jpg"
+                src="images/slider/slide-img-forTablet.png"
                 alt="watch on a wrist"
-                class="header__image-slider"
+                class="header__image-slider header__image-slider--is-active"
               >
             </picture>
+
+            <img src="./images/slider/desk.jpg" alt="desk" class="header__image-slider">
+            <img src="./images/slider/presentation.jpg" alt="desk" class="header__image-slider">
 
             <div class="header__slider-controls-wrapper">
               <div class="header__slider-button">
@@ -136,7 +136,7 @@
       <div class="expertise-section-wrapper">
         <section class="expertise" id="expertise">
           <h2 class="expertise__title">Our expertise</h2>
-          <article class="expertise__article">
+          <article class="expertise__article  expertise__article--1">
             <img
               src="images/expertise-images/branding.png"
               alt="branding"
@@ -152,7 +152,7 @@
             </p>
           </article>
 
-          <article class="expertise__article">
+          <article class="expertise__article expertise__article--2">
             <img
               src="images/expertise-images/communication.png"
               alt="communication"
@@ -168,7 +168,7 @@
             </p>
           </article>
 
-          <article class="expertise__article">
+          <article class="expertise__article expertise__article--3">
             <img
               src="images/expertise-images/strategy.png"
               alt="strategy"
@@ -287,7 +287,7 @@
           <p class="testimonials__intro">What people say</p>
 
           <div class="testimonials__cards">
-            <article class="testimonials__card">
+            <article class="testimonials__card testimonials__card--01">
               <div class="testimonials-image-wrapper">
                 <img
                   src="images/testimonials/Tal-Gilad.png"
@@ -306,7 +306,7 @@
               <p class="testimonials__company">Teach for America</p>
             </article>
 
-            <article class="testimonials__card">
+            <article class="testimonials__card testimonials__card--02">
               <div class="testimonials-image-wrapper">
                 <img
                   src="images/testimonials/Azadeh-Hawkins.png"
@@ -325,7 +325,7 @@
               <p class="testimonials__company">Hawkins Consulting</p>
             </article>
 
-            <article class="testimonials__card">
+            <article class="testimonials__card testimonials__card--03">
               <div class="testimonials-image-wrapper">
                 <img
                   src="images/testimonials/Michel-Grover.png"
@@ -516,5 +516,7 @@
         </section>
       </div>
     </footer>
+
+    <script src="./scripts/main.js"></script>
   </body>
 </html>

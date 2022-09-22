@@ -13,6 +13,8 @@ $pull-footer-by: 15px;
   text-align: center;
   margin-bottom: $pull-footer-by * -1;
 
+  overflow-x: hidden;
+
   @include above640 {
     padding: 200px 41px;
     padding-bottom: 200px + $pull-footer-by;
@@ -23,6 +25,15 @@ $pull-footer-by: 15px;
     font-size: 44px;
     line-height: 120%;
     margin-bottom: 24px;
+
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: transform 1s, opacity 1s;
+
+    &--active {
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
 
   &__text {
@@ -33,6 +44,15 @@ $pull-footer-by: 15px;
     margin-bottom: 56px;
     max-width: 733px;
     text-align: center;
+
+    transform: translateX(100px);
+    opacity: 0;
+    transition: transform 1s, opacity 1s;
+
+    &--active {
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
 
   &__link {

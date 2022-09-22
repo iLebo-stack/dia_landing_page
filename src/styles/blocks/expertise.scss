@@ -6,6 +6,7 @@
   text-align: center;
   padding: 72px var(--paddingX);
   max-width: 1145px;
+  overflow-x: hidden;
 
   @include above320 {
     padding-top: 128px;
@@ -22,6 +23,15 @@
     font-size: 44px;
     line-height: 120%;
 
+    transform: translateX(100px);
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+
+    &--active {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
     grid-column: 1/-1;
     grid-row: 1/2;
 
@@ -31,7 +41,27 @@
   }
 
   &__article {
-    transition: transform $transition-duration;
+    transition: transform 1s, opacity 1s;
+
+    &--1 {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+
+    &--2 {
+      transform: scale(.5);
+      opacity: 0;
+    }
+
+    &--3 {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+
+    &--active {
+      transform: translateX(0);
+      opacity: 1;
+    }
 
     &:hover {
       transform: scale(1.1);

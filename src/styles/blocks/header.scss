@@ -104,30 +104,20 @@
   }
 
   &__slider {
+    display: flex;
+    max-height: 390px;
+
     position: absolute;
-    width: 100%;
+    max-width: 1167px;
     left: 0;
+    right: 0;
     bottom: 0;
     border-radius: 30px;
     overflow: hidden;
 
     @include above640 {
-      width: initial;
-      overflow: initial;
-      left: initial;
-      right: -110px * 2;
-    }
-
-    @include above880 {
-      right: 0;
-    }
-
-    @include above1024 {
-      right: -90px;
-    }
-
-    @include above1600 {
-      right: -190px;
+      max-height: 680px;
+      border-radius: 0;
     }
 
     &-button {
@@ -169,5 +159,12 @@
 
   &__image-slider {
     display: block;
+    object-fit: cover;
+    max-height: 390px;
+    transition: transform 1s ease-in;
+
+    @media screen and (min-width: 585px) {
+      max-height: 680px;
+    }
   }
 }

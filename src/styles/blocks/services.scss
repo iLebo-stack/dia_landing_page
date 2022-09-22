@@ -3,6 +3,7 @@
   padding: 120px var(--paddingX);
   max-width: 1145px;
   width: 100%;
+  overflow-x: hidden;
 
   @include above640 {
     padding-top: 251px;
@@ -12,6 +13,7 @@
   &__content {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     row-gap: 48px;
 
     @include above980 {
@@ -21,6 +23,15 @@
   }
 
   &__promo {
+
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: transform 1s, opacity 1s;
+
+    &--active {
+      transform: translateX(0);
+      opacity: 1;
+    }
 
     @include above320 {
       max-width: 264px;
@@ -35,6 +46,15 @@
     text-transform: uppercase;
     color: $c-lightgray;
     margin-bottom: 16px;
+
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: transform 1s, opacity 1s;
+
+    &--active {
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
 
   &__slogan {
@@ -75,6 +95,35 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    &--position--001 {
+      transform: translateY(-100px);
+      opacity: 0;
+      transition: transform 1s, opacity 1s;
+    }
+
+    &--position--002 {
+      transform: translateX(100px);
+      opacity: 0;
+      transition: transform 1s, opacity 1s;
+    }
+
+    &--position--003 {
+      transform: translateY(100px);
+      opacity: 0;
+      transition: transform 1s, opacity 1s;
+    }
+
+    &--position--004 {
+      transform: translateX(100px);
+      opacity: 0;
+      transition: transform 1s, opacity 1s;
+    }
+
+    &--active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
 
     @include above640 {
       &--position--001 {
